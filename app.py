@@ -15,7 +15,7 @@ def generate_progress():
 def index(): 
     return render_template('index.html')
 
-@app.route('/download', methods=['POST'])
+@app.route('/download', methods=['GET', 'POST'])
 def download():
     try:
         video_url = request.form['video_url']
