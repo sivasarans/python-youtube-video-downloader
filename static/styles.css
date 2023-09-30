@@ -1,0 +1,119 @@
+<style>
+body, h1, h2, p, form, label, input {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+.banner {
+    margin: 1em 0;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+}
+
+.banner img {
+    width: 100%;
+    display: block;
+}
+
+main {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1em;
+}
+
+input {
+    margin-top: 0.5em;
+    padding: 0.5em;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#progress-bar {
+    margin-top: 2em;
+    text-align: center;
+}
+
+#progress-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progress {
+    height: 30px;
+    background-color: #4CAF50;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+
+#download-message {
+    margin-top: 1em;
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2em;
+    padding: 1em 0;
+    background-color: #333;
+    color: #fff;
+}
+
+#contact-us {
+    background-color: #eee;
+    padding: 1em;
+    text-align: center;
+    margin: 2em 0;
+}
+
+.whatsapp-number {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #25D366; /* WhatsApp green color */
+}
+
+    
+    </style>
