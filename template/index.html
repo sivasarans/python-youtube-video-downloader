@@ -6,25 +6,37 @@
     <link rel="stylesheet" href="styles.css">
     <title>YouTube Downloader</title>
     <script>
-        function showProgressBar() {
-            document.getElementById("progress-bar").style.display = "block";
-            var source = new EventSource("/progress");
-            source.onmessage = function (event) {
-                var progress = parseInt(event.data);
-                document.getElementById("progress").style.width = progress + "%";
-                document.getElementById("progress-text").innerText = progress + "%";
-                if (progress >= 100) {
-                    source.close();
-                    showDownloadMessage();
-                }
-            };
-        }
+    function showProgressBar() {
+        document.getElementById("progress-bar").style.display = "block";
+        var source = new EventSource("/progress");
+        source.onmessage = function (event) {
+            var progress = parseInt(event.data);
+            document.getElementById("progress").style.width = progress + "%";
+            document.getElementById("progress-text").innerText = progress + "%";
+            if (progress >= 100) {
+                source.close();
+                showDownloadMessage();
+            }
+        };
 
-        function showDownloadMessage() {
-            var message = document.getElementById("download-message");
-            message.style.display = "block";
-            document.getElementById("download-title").innerText = "Life is fragile | Reduce speed | motivational video 👍"; // Set the title dynamically
-        }
+        // Fetch code to send POST request
+        fetch('/download', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                video_url: 'your_video_url',  // Replace with the actual video URL
+                selected_quality: 'your_selected_quality',  // Replace with the actual quality
+            }),
+        });
+    }
+
+    function showDownloadMessage() {
+        var message = document.getElementById("download-message");
+        message.style.display = "block";
+        document.getElementById("download-title").innerText = "Life is fragile | Reduce speed | motivational video 👍";
+    }
     </script>
 </head>
 <body>
