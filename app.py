@@ -12,7 +12,7 @@ def generate_progress():
         yield f"data: {progress}\n\n"
 
 @app.route('/')
-def index():
+def index(): 
     return render_template('index.html')
 
 @app.route('/download', methods=['POST'])
